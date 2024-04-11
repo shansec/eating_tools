@@ -20,15 +20,15 @@
 # Go workspace file
 go.work
 
-!/vue_code/.idea/
-!/typescript_code/.idea/
-!/vue_code/vue2_code/main_code/node_modules/
-!/javascript_code/.idea/
-!/javascript_code/vue_code/pinia/node_modules/
-!/javascript_code/vue_code/pinia/.vscode/
-!/javascript_code/vue_code/vue/node_modules/
-!/javascript_code/vue_code/vue/.vscode/
-!/javascript_code/vue_code/vue-router/node_modules/
-!/javascript_code/vue_code/vue-router/.vscode/
-!/react_code/.idea/
-!/react_code/revise_code/myapp/node_modules/
+/javascript_code/.idea/
+/javascript_code/vue_code/pinia/.vscode/
+/javascript_code/vue_code/pinia/node_modules/
+/javascript_code/vue_code/vue/.vscode/
+/javascript_code/vue_code/vue/node_modules/
+/javascript_code/vue_code/vue-router/.vscode/
+/javascript_code/vue_code/vue-router/node_modules/
+/react_code/.idea/
+/react_code/revise_code/myapp/node_modules/
+/typescript_code/.idea/
+/vue_code/.idea/
+/vue_code/vue2_code/main_code/node_modules/
