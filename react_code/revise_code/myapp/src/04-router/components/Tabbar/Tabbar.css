@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.tabbar-box {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+
+.tabbar-box ul {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tabbar-box li,
+.tabbar-box li a {
+  flex: 1;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  list-style-type: none;
+  text-decoration: none;
+  color: #333;
+}
+
+.tabbar-box .active {
+  color: red;
+}

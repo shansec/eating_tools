@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>watch</title>
+    <style>
+        .question {
+            width: 300px;
+            height: 40px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="question">{{watchDeep.content}}</div>
+        <input type="text" v-model="watchDeep.content">
+    </div>
+</body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    const { createApp } = Vue
+
+    createApp({
+        data() {
+            return {
+                message: 'Hello Vue!',
+                question: '',
+                watchDeep: {
+                    content: 'content'
+                }
+            }
+        },
+        watch: {
+            question(newQuestion, oldQuestion) {
+                // 当输入 '/' 时，清空输入框
+                // watch 默认是浅层侦听的，被侦听的属性，仅在被赋新值时，才会触发回调函数，嵌套属性的变化不会出发
+                if (newQuestion.includes('/')) {
+                    this.question = ''
+                }
+            }
+        },
+    }).mount('#app')
+</script>
+
+</html>

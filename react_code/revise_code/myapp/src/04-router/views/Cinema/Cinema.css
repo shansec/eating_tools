@@ -1,0 +1,41 @@
+.cinema-container {
+  width: 100%;
+}
+
+.search {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 15px;
+  background-color: #fff;
+  border-bottom: 3px solid #f2f2f2;
+}
+
+.search input {
+  width: 100%;
+  height: 32px;
+  border-radius: 32px;
+  background-color: #f2f2f2;
+  border: none;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.cinema-box {
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 50px;
+}
+
+.cinema-item {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  border-bottom: 1px solid #f2f2f2;
+} 

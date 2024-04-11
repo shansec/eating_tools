@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>响应式系统-完善</title>
+  </head>
+  <body></body>
+  <script>
+    const bucket = new WeakMap()
+
+    const data = { text: 'hello Vue3' }
+
+    // 用一个全局变量存储当前激活的 effect 函数
+    let activeEffect
+    // effect 栈
+    const effectStack = []
+    function effect(fn) {
+      const effectFn = () => {
+        // 调用 cleanup 函数完成清除工作
+        cleanup(effectFn)
+        // 当调用 effect 注册副作用函数时，将副作用函数赋值给 activeEffect
+        activeEffect = effectFn
+        // 在调用副作用函数之前将当前副作用函数压入栈中
+        effectStack.push(effectFn)
+        fn()
+        // 在当前副作用函数执行完毕后，将当前副作用函数弹出栈，并把 activeEffect 还原为之前的值
+        effectStack.pop()
+        activeEffect = effectStack[effectStack.length - 1]
+      }
+      effectFn.deps = []
+      effectFn()
+    }
+
+    function cleanup(effectFn) {
+      for (let i = 0; i < effectFn.deps.length; i++) {
+        const deps = effectFn.deps[i]
+        deps.delete(effectFn)
+      }
+      effectFn.deps.length = 0
+    }
+
+    const obj = new Proxy(data, {
+      get(target, key) {
+        track(target, key)
+        return target[key]
+      },
+      set(target, key, value) {
+        target[key] = value
+        trigger(target, key)
+      }
+    })
+
+    const track = (target, key) => {
+      if (!activeEffect) return target[key]
+      let depsMap = bucket.get(target)
+      if (!depsMap) {
+        bucket.set(target, (depsMap = new Map()))
+      }
+      let deps = depsMap.get(key)
+      if (!deps) {
+        depsMap.set(key, (deps = new Set()))
+      }
+      deps.add(activeEffect)
+      activeEffect.deps.push(deps)
+    }
+
+    const trigger = (target, key) => {
+      const depsMap = bucket.get(target)
+      if (!depsMap) return
+
+      const effects = depsMap.get(key)
+      // 新增一个 Set 接口来解决无线循环的问题
+      const effectsToRun = new Set(effects)
+      effectsToRun.forEach(effectFn => effectFn())
+      // effects && effects.forEach(fn => fn())
+    }
+
+    effect(() => {
+      console.log('effect run')
+      document.body.innerText = obj.text
+    })
+    setTimeout(() => {
+      obj.text = 'hello'
+    }, 2000)
+
+    // effect(function effectFn() {
+    //   document.body.innerText = obj.ok ? obj.text : 'not'
+    // })
+    // 在 effectFn 函数内部存在一个三元表达式，根据字段 obj.ok 值的不同会执行不同的代码分支。
+    //  当字段 obj.ok 的值发生变化时，代码执行的分支会跟着变化，这就是所谓的分支切换。
+  </script>
+</html>

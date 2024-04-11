@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>grid</title>
+  <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+<!--
+    容器：采用网格布局的区域
+    项目：容器内的直接子元素
+    网格轨道：两条网格线之间的区间
+    网格区域：由网格中一个或者是多个单元格组成的区域，类似于单元格的合并
+    网格内容区域：所有的grid项目组成的整体
+    fr的计算：
+      每一列宽 = 容器宽 * （当前列 fr 值 / 所有列 fr 值总和）
+      每一行高 = 容器高 *（当前行 fr 值 / 所有行 fr 值总和）
+
+    隐式网格：不是grid-template-columns或grid-template-rows指定尺寸创建出来行和列形成的网格，而是自动布局算法创建的额外的行或列形成的网格。
+    grid-auto-columns ：隐式创建的网格纵向轨道（track）的宽度。即设置隐式网格的宽度
+    grid-auto-rows：用于指定隐式创建的行轨道大小。即设置隐式网格的高度
+ -->
+<div class="container">
+  <div class="container-child1">1</div>
+  <div class="container-child2">2</div>
+  <div class="container-child3">3</div>
+  <div class="container-child4">4</div>
+  <div class="container-child5">5</div>
+  <div class="container-child6">6</div>
+  <div class="container-child7">7</div>
+  <div class="container-child8">8</div>
+  <div class="container-child9">9</div>
+</div>
+</body>
+</html>

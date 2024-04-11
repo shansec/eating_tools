@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<div id="app" class="app">{{name}} <h1>ssss</h1></div>
+<body>
+<script src="../dist/umd/vue.js"></script>
+<script>
+  let vm = new Vue({
+    el: '#app',
+    data() {
+      return {
+        name: 'shansec',
+        a: {
+          b: 20
+        },
+        list: [1, 2, 3],
+        arr_list: [2, 4, 8],
+        arr: [{a: 1}]
+      }
+    },
+    watch: {},
+    props: {}
+  })
+  // console.log(vm._data.arr.push({b: 2}))
+  // vue初次渲染 -> 先初始化数据 -> 将模板进行编译 -> 变成 render() 函数 -> 生成虚拟节点 -> 变成真实 DOM
+  //  vue 模板编译：template render el 注意：el(必需要有) render() template
+</script>
+</body>
+
+</html>
