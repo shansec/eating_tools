@@ -32,3 +32,4 @@ go.work
 /typescript_code/.idea/
 /vue_code/.idea/
 /vue_code/vue2_code/main_code/node_modules/
+.idea/

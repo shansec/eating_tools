@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>实现上下垂直居中最便捷的方法</title>
+    <link rel="stylesheet" href="./CSS/12-实现上下垂直居中最便捷的方法.css" />
+  </head>
+  <body>
+    <!-- 在 flex 格式化上下文中，设置了 margin: auto 的元素，在通过 justify-content 和 align-self 进行对齐之前，任何正处于空闲的空间都会分配到该方向的自动 margin 中去
+这里, 脱离文档流的元素除外 -->
+    <div class="g-container">
+      <div class="g-box"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.g-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: #fff;
+}
+
+.g-box {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  background-color: #333;
+  margin: auto;
+}
