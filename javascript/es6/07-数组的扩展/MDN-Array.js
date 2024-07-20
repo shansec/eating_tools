@@ -302,3 +302,30 @@ console.log([1, 2, , 3, [4]].flat())
 /**
  * Array.prototype.splice()
  */
+
+/**
+ * Array.prototype.toLocaleString()
+ */
+// Array.prototype.toLocaleString()：返回一个字符串，表示数组中的所有元素。
+//  每个元素通过调用它们自己的 toLocaleString 方法转换为字符串，并且使用特定于语言环境的字符串（例如逗号“,”）分隔开
+// toLocaleString(locales, options)：
+//  locales：带有 BCP 47 语言标签的字符串，或者此类字符串的数组
+//  options：一个具有配置属性的对象
+const prices = ['￥7', 500, 8123, 12]
+console.log(prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))
+
+/**
+ * Array.prototype.toReversed()
+ */
+
+/**
+ * Array.prototype.toSorted()
+ */
+
+/**
+ * Array.prototype.toSpliced()
+ */
+
+/**
+ * Array.prototype.values()
+ */
