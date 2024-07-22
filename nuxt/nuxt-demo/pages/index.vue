@@ -7,3 +7,8 @@
 <script>
 import '~/assets/css/first.css'
 </script>
+<style>
+h1 {
+  font-family: 'MyFont', sans-serif;
+}
+</style>

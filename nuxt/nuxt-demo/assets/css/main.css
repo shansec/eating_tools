@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('/nuxt/nuxt-demo/public/fonts/极影毁片圆.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
