@@ -1,7 +1,12 @@
 <template>
   <div>
-    <AppHeader />
+    <pre>默认布局</pre>
     <slot />
-    <AppFooter />
   </div>
 </template>
+
+<style scoped>
+div {
+  background-color: lightgreen;
+}
+</style>

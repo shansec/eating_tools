@@ -1,14 +1,17 @@
 <template>
   <div>
-    <h1>欢迎来到首页</h1>
-    <AppAlert> 这是一个自动导入的组件。 </AppAlert>
+    <header>
+      <nav>
+        <ul>
+          <!-- <li><NuxtLink to="/index">首页</NuxtLink></li> -->
+          <li><NuxtLink to="/about">关于</NuxtLink></li>
+          <li><NuxtLink to="/posts/1">文章1</NuxtLink></li>
+          <li><NuxtLink to="/posts/2">文章2</NuxtLink></li>
+        </ul>
+      </nav>
+    </header>
   </div>
 </template>
-<script>
-import '~/assets/css/first.css'
+<script setup lang="ts">
+const title = ref('你好，Nuxt')
 </script>
-<style>
-h1 {
-  font-family: 'MyFont', sans-serif;
-}
-</style>

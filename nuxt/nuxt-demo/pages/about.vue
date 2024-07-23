@@ -5,6 +5,12 @@
 </template>
 <script>
 import 'animate.css'
+definePageMeta({
+  pageTransition: {
+    name: 'rotate',
+    layout: 'orange'
+  }
+})
 </script>
 <style>
 @import url('animate.css');
