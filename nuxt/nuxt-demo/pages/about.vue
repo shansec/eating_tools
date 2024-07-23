@@ -6,9 +6,12 @@
 <script>
 import 'animate.css'
 definePageMeta({
+  layout: 'orange',
   pageTransition: {
     name: 'rotate',
-    layout: 'orange'
+    onBeforeEnter: el => {},
+    onEnter: (el, done) => {},
+    onAfterEnter: el => {}
   }
 })
 </script>
