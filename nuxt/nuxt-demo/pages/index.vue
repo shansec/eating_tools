@@ -8,6 +8,8 @@
           <li><NuxtLink to="/dashboard">仪表盘</NuxtLink></li>
           <li><NuxtLink to="/posts/1">文章1</NuxtLink></li>
           <li><NuxtLink to="/posts/2">文章2</NuxtLink></li>
+          <li><NuxtLink to="/counter">计数器</NuxtLink></li>
+          <li><NuxtLink to="/stateHigh">存储高级用法</NuxtLink></li>
         </ul>
       </nav>
     </header>
