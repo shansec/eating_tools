@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "test": "vitest",
+    "bench": "vitest bench",
+    "UI": "vitest --ui"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "@vitest/ui": "^2.1.8"
+  }
+}
