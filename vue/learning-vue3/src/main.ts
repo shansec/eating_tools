@@ -1,14 +1,15 @@
 import './assets/main.css'
 
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-
 import App from './App.vue'
-import router from './router'
 
-const app = createApp(App)
+import i18Plugin from './plugins/i18n'
 
-app.use(createPinia())
-app.use(router)
+// 全局注册组件
+import Common from './components/component/commonComponent.vue'
 
-app.mount('#app')
+const app = createApp(App).component("common", Common).use(i18Plugin, {
+  greetings: {
+    hello: 'Bonjour!'
+  }
+}).mount('#app')

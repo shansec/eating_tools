@@ -1,85 +1,25 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import BindClassStyle from "./components/bindClassStyle/index.vue";
+import EventHandle from "./components/eventHandle/index.vue";
+import Listener from "./components/listener/index.vue";
+import TemReference from "./components/temReference/index.vue";
+import Basic from "./components/component/basic.vue";
+import EventComponent from "@/components/component/eventComponent.vue";
+import VModelComponent from "@/components/component/vModelComponent.vue";
+import SlotsComponent from "@/components/component/slotsComponent.vue";
+import Transitions from "@/components/transition/index.vue";
+import CompositeFunc from "@/components/compositeFunction/index.vue";
+import CustomDirectives from "@/components/customDirectives/index.vue";
+import KeepLiveInnerCom from "@/components/keepLiveInnerCom/index.vue";
+import TelePortInnerCom from "@/components/telePortInnerCom/index.vue";
+import Plugins from "@/components/plugins/index.vue";
+import ResponsiveSystem from "@/components/responsiveSystem/index.vue";
+import RenderMechanism from "@/components/renderMechanism/index.vue";
+import H from "@/components/h/index.vue";
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <H></H>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>
+<style scoped></style>
