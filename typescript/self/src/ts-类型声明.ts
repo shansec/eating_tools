@@ -1,0 +1,1 @@
+variableOfA = 1 

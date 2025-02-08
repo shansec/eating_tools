@@ -14,6 +14,7 @@ const obj: myObj = {
 
 // 属性名的索引类型
 type myPro = {
-  [index: number]: number
+  [index: number]: string
+  [index2: string]: number | string   // 如果对象有数值索引和字符串索引，那么当发生冲突时数值索引需要服从字符串索引
 }
-const pro: myPro = [1, 2, 3]
+// const pro: myPro = [1, 2, 3]

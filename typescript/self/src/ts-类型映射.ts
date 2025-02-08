@@ -1,3 +1,14 @@
+// 映射修饰符
+type keyofModifiersA = {
+  a: number
+  b?: string
+  readonly c: boolean
+}
+
+type keyofModifiersB = {
+  -readonly [prop in keyof keyofModifiersA]: keyofModifiersA[prop]
+}
+
 // 键名重映射
 type keyRemapA = {
   foo: string
