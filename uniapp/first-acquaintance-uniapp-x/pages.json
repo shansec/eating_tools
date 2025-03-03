@@ -2438,11 +2438,19 @@
 	{
 		"root": "pages/learn",
 		"pages": [{
-			"path" : "uts/data-type",
+			"path" : "uts/data-type/data-type",
 			"group": "3,0,0",
 			"style" : 
 			{
 				"navigationBarTitleText" : "数据类型"
+			}
+		},
+		{
+			"path" : "uts/literal/literal",
+			"group": "3,0,1",
+			"style" : 
+			{
+				"navigationBarTitleText" : "字面量"
 			}
 		}
 			
@@ -3468,6 +3476,10 @@
 						{
 							"id": "learn.uts.data-type",
 							"name": "data-type"
+						},
+						{
+							"id": "learn.uts.literal",
+							"name": "literal"
 						}
 					]
 				}
